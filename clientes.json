@@ -8,20 +8,20 @@
           "promocion01": {
                "codigo_promocion": "88101133",
                "porcentaje_descuento": "20%",
-               "productos": "TODO POLLO GRANEL KG",
-               "img": "img/20.jpg"
+               "productos": "Trutro entero de pollo granel",
+               "img": "img/trutro-entero-de-pollo-granel.png"
           },
           "promocion02": {
                "codigo_promocion": "88101181",
                "porcentaje_descuento": "10%",
-               "productos": "TODAS LAS CECINAS GRANEL SAN JORGE",
-               "img": "img/20.jpg"
+               "productos": "Leche Soprole entera, descremada o semidescremada 1 lt",
+               "img": "img/leche-soprole-entera-descremada-o-semidescremada-1-lt.png"
           },
           "promocion03": {
                "codigo_promocion": "88101187",
                "porcentaje_descuento": "30%",
-               "productos": "TODO CAFÉ NESCAFÉ",
-               "img": "img/20.jpg"
+               "productos": "Posta negra rosada o paleta.png",
+               "img": "img/posta_negra_rosada_o_paleta_.png"
           }
      },
      {
@@ -32,20 +32,20 @@
           "promocion01": {
                "codigo_promocion": "88101143",
                "porcentaje_descuento": "20%",
-               "productos": "TODO YOGHURT NESTLÉ",
-               "img": "img/20.jpg"
+               "productos": "Postres frescos Soprole",
+               "img": "img/postres-frescos-soprole.png"
           },
           "promocion02": {
                "codigo_promocion": "88101183",
                "porcentaje_descuento": "10%",
-               "productos": "TODO QUESOS GAUDA GRANEL CALO",
-               "img": "img/20.jpg"
+               "productos": "Pack Cerveza Budweiser botella 12 un x 355 cc",
+               "img": "img/pack-cerveza-budweiser-botella-12-un-x-355-cc.png"
           },
           "promocion03": {
                "codigo_promocion": "88101123",
                "porcentaje_descuento": "30%",
-               "productos": "TODAS LAS CERVEZAS BECKER",
-               "img": "img/20.jpg"
+               "productos": "Aceite belmont",
+               "img": "img/aceite-belmont.png"
           }
      },
      {
@@ -57,20 +57,20 @@
           "promocion01": {
                "codigo_promocion": "88101183",
                "porcentaje_descuento": "20%",
-               "productos": "TODO PAPEL HIGIENICOS CONFORT",
-               "img": "img/20.jpg"
+               "productos": "Coca-Cola",
+               "img": "img/coca-cola.png"
           },
           "promocion02": {
                "codigo_promocion": "88101155",
                "porcentaje_descuento": "10%",
-               "productos": "TODAS LAS CECINAS GRANEL SAN JORGE",
-               "img": "img/20.jpg"
+               "productos": "Papel higiénico Confort",
+               "img": "img/papel-higienico-confort.png"
           },
           "promocion03": {
                "codigo_promocion": "881011867",
                "porcentaje_descuento": "30%",
-               "productos": "TODO CAFÉ NESCAFÉ",
-               "img": "img/20.jpg"
+               "productos": "Whisky 100 pipers",
+               "img": "img/whisky-100-pipers.png"
           }
      }
 ]

@@ -1,0 +1,76 @@
+[
+               
+     {
+          "rut": "17.303.969-7",
+          "nombre": "max cortazabal",
+          "telefono": "956144519",
+          "correo": "edo@motiondesign.cl",
+          "promocion01": {
+               "codigo_promocion": "88101133",
+               "porcentaje_descuento": "20%",
+               "productos": "TODO POLLO GRANEL KG",
+               "img": "img/20.jpg"
+          },
+          "promocion02": {
+               "codigo_promocion": "88101181",
+               "porcentaje_descuento": "10%",
+               "productos": "TODAS LAS CECINAS GRANEL SAN JORGE",
+               "img": "img/20.jpg"
+          },
+          "promocion03": {
+               "codigo_promocion": "88101187",
+               "porcentaje_descuento": "30%",
+               "productos": "TODO CAFÉ NESCAFÉ",
+               "img": "img/20.jpg"
+          }
+     },
+     {
+          "rut": "16.013.794-0",
+          "nombre": "eduardo palma",
+          "telefono": "956144519",
+          "correo": "aut.vincere@gmail.com",
+          "promocion01": {
+               "codigo_promocion": "88101143",
+               "porcentaje_descuento": "20%",
+               "productos": "TODO YOGHURT NESTLÉ",
+               "img": "img/20.jpg"
+          },
+          "promocion02": {
+               "codigo_promocion": "88101183",
+               "porcentaje_descuento": "10%",
+               "productos": "TODO QUESOS GAUDA GRANEL CALO",
+               "img": "img/20.jpg"
+          },
+          "promocion03": {
+               "codigo_promocion": "88101123",
+               "porcentaje_descuento": "30%",
+               "productos": "TODAS LAS CERVEZAS BECKER",
+               "img": "img/20.jpg"
+          }
+     },
+     {
+          "rut": "25.612.131-k",
+          "nombre": "francisco murillo",
+          "telefono": "956144519",
+          "correo": "franciscomurillo21@yahoo.es",
+
+          "promocion01": {
+               "codigo_promocion": "88101183",
+               "porcentaje_descuento": "20%",
+               "productos": "TODO PAPEL HIGIENICOS CONFORT",
+               "img": "img/20.jpg"
+          },
+          "promocion02": {
+               "codigo_promocion": "88101155",
+               "porcentaje_descuento": "10%",
+               "productos": "TODAS LAS CECINAS GRANEL SAN JORGE",
+               "img": "img/20.jpg"
+          },
+          "promocion03": {
+               "codigo_promocion": "881011867",
+               "porcentaje_descuento": "30%",
+               "productos": "TODO CAFÉ NESCAFÉ",
+               "img": "img/20.jpg"
+          }
+     }
+]

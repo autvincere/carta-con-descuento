@@ -3,7 +3,6 @@ h2{
      padding: 0px;
      margin: 0px;
      top: 40%;
-     position: absolute;
      left: 19%;
 }
 h4{
@@ -11,7 +10,6 @@ h4{
      padding: 0px;
      margin: 0px;
      top: 71%;
-     position: absolute;
      left: 7%;
      line-height: 28px;
      text-transform: capitalize;
@@ -22,14 +20,12 @@ h5{
      margin: 0px;
      top: 71%;
      height: 52px;
-     position: absolute;
      left: 30%;
 }
 .imagen-producto{
      padding: 0px;
      margin: 0px;
      top: 10%;
-     position: absolute;
      left: 20%;
      max-width: 113px;
      width: 100%;
@@ -57,8 +53,21 @@ h5{
      border-radius: 0.8rem;
      transform-style: preserve-3d;
      display: inline-block;
+     transition: transform 0.5s ease-in-out;
+               transform: rotateY(0deg);
 }
-
+.cartita {
+     position: relative;
+     width: 180px;
+     height: 300px;
+     margin: 0.5rem;
+     text-align: center;
+     line-height: 8rem;
+     color: #ecf0f1;
+     border-radius: 0.8rem;
+     transform-style: preserve-3d;
+     display: inline-block;
+}
 .face {
      display: block;
      position: absolute;
@@ -83,14 +92,35 @@ h5{
      font-size: 1.5rem;
      transform: rotateY(180deg);
 }
+.rotate {
+     transition: transform 0.5s ease-in-out;
+     transform: rotateY(-180deg);
+}
 
-.card:hover .face--front {
+.desrotate {
+     transition: transform 0.5s ease-in-out;
+     transform: rotateY(0deg);
+}
+form{
+     transition: all 0.7s ease;
+     opacity: 1;
+     display: block;
+}
+.hide{
+     transition: all 0.7s ease;
+     opacity: 0;
+     /* display: none; */
+}
+.absolute{
+     position: absolute;
+}
+/* .card:hover .face--front {
      transform: rotateY(-180deg);
 }
 
 .card:hover .face--back {
      transform: rotateY(0deg);
-}
+} */
 
 img {
      /* max-width: 90px; */
@@ -101,4 +131,24 @@ img {
 figure {
      display: inline-block;
      vertical-align: text-top
+}
+.modal{
+     transition: all 0.7s ease;
+     opacity: 1;
+     width: 80%;
+     max-width: 340px;
+     margin: 0 auto;
+     background-color: white;
+     border-radius: 13px;
+     padding: 10px 10px;
+     border: 7px solid red;
+     box-shadow: 0 0 20px 1000px rgba(0, 0, 0, 0.7);
+     position: absolute;
+     left: 35%;
+     top: 4%;
+}
+.close{
+    float: right;
+    width: 30px;
+    height: 30px;
 }

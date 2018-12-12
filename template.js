@@ -1,60 +1,62 @@
 const templateCartas =
-               `<div class="card">
+     `
+               <div id="one" class="card">
                <div class="face face--front">
 
                </div>
 
                <div class="face face--back">
-                    <div id="one">&nbsp;</div>
+                    <h2 id= "lose">lose</h2>
                </div>
           </div>
 
-          <div class="card">
+          <div id="two" class="card">
                <div class="face face--front">
 
                </div>
 
                <div class="face face--back">
-                    <div id="two">&nbsp;</div>
+                    <h2 id= "lose">lose</h2>
                </div>
           </div>
 
-          <div class="card">
+          <div id="three" class="card">
                <div class="face face--front">
 
                </div>
 
                <div class="face face--back">
-                    <div id="three">&nbsp;</div>
+                    <h2 id= "lose">lose</h2>
                </div>
           </div>
 
-          <div class="card">
+          <div id="four" class="card">
                <div class="face face--front">
 
                </div>
 
                <div class="face face--back">
-                    <div id="four">&nbsp;</div>
+                    <h2 id= "lose">lose</h2>
                </div>
           </div>
 
-          <div class="card">
+          <div id="five" class="card">
                <div class="face face--front">
 
                </div>
 
                <div class="face face--back">
-                    <div id="five">&nbsp;</div>
+                    <h2 id= "lose">lose</h2>
                </div>
           </div>
 
-          <div class="card">
+          <div id="six" class="card">
                <div class="face face--front">
 
                </div>
 
                <div class="face face--back">
-                    <div id="six">&nbsp;</div>
+                    <h2 id= "lose">lose</h2>
                </div>
           </div>`;
+

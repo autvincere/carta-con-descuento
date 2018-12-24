@@ -9,11 +9,12 @@ function app() {
      const cardFive = 'five'
      const cardSix = 'six'
 
-     // cartas
+     // TAGS
      const campoRut = document.querySelector('input[name=rut]');
      const enviar = document.querySelector('#enviar');
      const carta = document.getElementsByClassName('card');
      const form = document.querySelector('form');
+     const close = document.querySelector('.close');
 
 
      enviar.addEventListener("click", detectRut);
@@ -39,10 +40,25 @@ function app() {
                let approved = datos.filter(
                     user => user.rut == rutFinal
                ); // DEVUELVE EL ARRAY DONDE ESTA EL DATO FILTRADO
+               
+               let validaRut = Rut(form1.rut.value);
 
                if (approved < 1) {
-                    console.log('porfavor ingresa un rut valido')
-               } else {
+                    container.innerHTML += `<div class="modal"><button class="close" type="button">X</button><h3 style="font-size: 2em;
+                    font-weight: 500;">Porfavor ingresa un rut valido</h3></div>`;
+                    const close = document.querySelector('.close');
+                    close.addEventListener("click", resetApp);
+                    console.log('porfavor ingresa un rut válido')
+               } 
+               else if (validaRut == false) {
+                    
+                    container.innerHTML += `<div class="modal"><button class="close" type="button">X</button><h3 style="font-size: 2em;
+                    font-weight: 500;">Ingresa un formato válido porfavor</h3></div>`;
+                    const close = document.querySelector('.close');
+                    close.addEventListener("click", resetApp);
+                    
+               }
+               else {
                     //console.log('Tu Rut es valido')
                     container.innerHTML = templateCartas;
                     form.classList.add("hide");
@@ -66,11 +82,11 @@ function app() {
 
                let productos =
                     `
-          <img class="imagen-producto absolute" src="${valueToUse[0].img}" alt="${valueToUse[0].productos}">
-          <h2 class="absolute">${valueToUse[0].porcentaje_descuento}</h2>
-          <h4 class="absolute">${valueToUse[0].productos}</h4>
-          <h5 class="absolute">${valueToUse[0].codigo_promocion}</h5>
-          `
+                    <img class="imagen-producto absolute" src="${valueToUse[0].img}" alt="${valueToUse[0].productos}">
+                    <h2 class="absolute">${valueToUse[0].porcentaje_descuento}</h2>
+                    <h4 class="absolute">${valueToUse[0].productos}</h4>
+                    <h5 class="absolute">${valueToUse[0].codigo_promocion}</h5>
+                    `
 
                // const img =
                // const codigo =
@@ -89,7 +105,10 @@ function app() {
                     <h5>${valueToUse[0].codigo_promocion}</h5>
                </div>
                `
+               const oportunidades =`<div class="modal"><button class="close" type="button">X</button><h3 style="font-size: 2em;
+               font-weight: 500;">Lo sentimos, se acabaron tus oportunidades</h3></div>`
 
+               
                for (i = 0; i < carta.length; i++) {
                     carta[i].addEventListener("click", rotar);
                }
@@ -107,9 +126,13 @@ function app() {
 
                     //const detectId= e.target.nextSibling.nextElementSibling.firstChild;
 
-                    if (counter == 5) {
-                         console.log('acabaste tus oportunidades');
-                    }
+                    // if (counter >= 5) {
+                    //      container.innerHTML += `<div class="modal"><button class="close" type="button">X</button><h3 style="font-size: 2em;
+                    //      font-weight: 500;">Lo sentimos, se acabaron tus oportunidades</h3></div>`;
+                    //      const close = document.querySelector('.close');
+                    //      close.addEventListener("click", resetApp);
+                    //      console.log('acabaste tus oportunidades');
+                    // }
 
                     if (idClickeado != positionToUse) {
                          setTimeout(function () {
@@ -117,7 +140,16 @@ function app() {
                               document.getElementById(idClickeado).classList += " desrotate";
                               console.log('desrotar');
                          }, 2000);
-                    } else {
+                    }
+                    else if (counter >= 5) {
+                         container.innerHTML += `<div class="modal"><button class="close" type="button">X</button><h3 style="font-size: 2em;
+                         font-weight: 500;">Lo sentimos, se acabaron tus oportunidades</h3></div>`;
+                         const close = document.querySelector('.close');
+                         close.addEventListener("click", resetApp);
+                         console.log('acabaste tus oportunidades');
+                    
+                    } 
+                    else {
                          console.log('ganaste');
                          setTimeout(function () {
                               container.innerHTML += modal;
@@ -135,9 +167,8 @@ function app() {
 
      }
      function resetApp() {
-          console.log('retornar');
+          //console.log('retornar');
           container.innerHTML = '';
-          //document.innerHTML += formulario;
           form.classList.remove("hide");
           campoRut.value ='';
           // form.value = '';

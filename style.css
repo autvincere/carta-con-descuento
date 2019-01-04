@@ -1,11 +1,28 @@
-h2{
+* {
+     margin: 0;
+     padding: 0;
+     -webkit-font-smoothing: antialiased;
+     -ms-font-smoothing: antialiased;
+     -o-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     text-rendering: optimizeLegibility;
+     box-sizing: border-box;
+}
+
+body {
+     background: linear-gradient(0deg, #11631F 0, #5FE36D 100%);
+}
+
+h2 {
      font-size: 2.6em;
      padding: 0px;
      margin: 0px;
      top: 40%;
      left: 19%;
+     color: gray;
 }
-h4{
+
+h4 {
      font-size: 1em;
      padding: 0px;
      margin: 0px;
@@ -13,16 +30,79 @@ h4{
      left: 7%;
      line-height: 28px;
      text-transform: capitalize;
+     color: gray;
 }
-h5{
+
+h5 {
      font-size: 0.7em;
      padding: 0px;
      margin: 0px;
      top: 71%;
      height: 52px;
      left: 30%;
+     color: gray;
 }
-.imagen-producto{
+button{
+     padding: 7px 17px;
+    border-radius: 7px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #4e4e4e;
+    border: 0px solid #00000000;
+    background-color: #47ff59;
+    filter: drop-shadow(6px 2px 3px #0000009c);
+}
+input::placeholder {
+     color: gray;
+     text-align: center;
+     font-size: 1.5em;
+   }
+.text-center {
+     text-align: center;
+}
+
+.block {
+     display: block;
+}
+
+.line-title {
+     height: 1px;
+     background-color: white;
+     width: 17%;
+     display: inline-block;
+     vertical-align: middle;
+}
+
+.droid {
+     font-family: 'droid-sans', sans-serif;
+     font-weight: bolder;
+     font-style: normal;
+     font-size: 1.3em;
+     padding-bottom: 7px;
+     color: white;
+     text-shadow: 1px 1px 1px rgb(0, 0, 0);
+     text-transform: uppercase;
+ }
+.campo{
+     height: 30px;
+     border-radius: 8px;
+     border: 0px solid transparent;
+     width: 26%;
+     margin: 6px 0px 16px 0;
+}
+
+.title-count {
+     font-size: 2em;
+     font-family: 'Lobster', cursive;
+     font-weight: 100;
+     display: inline-block;
+     padding: 0px 12px;
+     text-transform: capitalize;
+     color: white;
+     text-shadow: 3px 3px 4px rgba(36, 36, 36, 0.95), 1px 1px 0 #FFFFFF;
+}
+
+.imagen-producto {
      padding: 0px;
      margin: 0px;
      top: 10%;
@@ -30,6 +110,7 @@ h5{
      max-width: 113px;
      width: 100%;
 }
+
 .container {
      /* display: flex; */
      width: 100%;
@@ -54,8 +135,10 @@ h5{
      transform-style: preserve-3d;
      display: inline-block;
      transition: transform 0.5s ease-in-out;
-               transform: rotateY(0deg);
+     transform: rotateY(0deg);
+     border: 2px solid #3838387a;
 }
+
 .cartita {
      position: relative;
      width: 180px;
@@ -68,6 +151,7 @@ h5{
      transform-style: preserve-3d;
      display: inline-block;
 }
+
 .face {
      display: block;
      position: absolute;
@@ -83,15 +167,29 @@ h5{
 }
 
 .face--front {
-     background: #2c3e50;
+     /* background: #2c3e50; */
+     background: #e8e8e8;
      font-size: 3rem;
+     background-repeat: no-repeat;
+     background-position: 50% 17%;
+     background-size: 70% 42%;
+}
+.rostro-one{
+     background-image: url(img/rostro1.png);
+}
+.rostro-two{
+     background-image: url(img/rostro2.png);
+}
+.rostro-three{
+     background-image: url(img/rostro3.png);
 }
 
 .face--back {
-     background: #2c3e50;
+     background: #e8e8e8;
      font-size: 1.5rem;
      transform: rotateY(180deg);
 }
+
 .rotate {
      transition: transform 0.5s ease-in-out;
      transform: rotateY(-180deg);
@@ -101,18 +199,26 @@ h5{
      transition: transform 0.5s ease-in-out;
      transform: rotateY(0deg);
 }
-form{
+
+form {
      transition: all 0.7s ease;
      opacity: 1;
      display: block;
 }
-.hide{
+
+.hide {
      transition: all 0.7s ease;
      opacity: 0;
      /* display: none; */
 }
-.absolute{
+
+.absolute {
      position: absolute;
+}
+.imagen-miniatura{
+     max-width: 135px;
+     width: 100%;
+     vertical-align: text-top;
 }
 /* .card:hover .face--front {
      transform: rotateY(-180deg);
@@ -132,7 +238,8 @@ figure {
      display: inline-block;
      vertical-align: text-top
 }
-.modal{
+
+.modal {
      transition: all 0.7s ease;
      opacity: 1;
      width: 80%;
@@ -147,8 +254,9 @@ figure {
      left: 35%;
      top: 4%;
 }
-.close{
-    float: right;
-    width: 30px;
-    height: 30px;
+
+.close {
+     float: right;
+     width: 30px;
+     height: 30px;
 }

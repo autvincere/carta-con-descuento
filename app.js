@@ -16,15 +16,18 @@ function app() {
      const form = document.querySelector('form');
      const close = document.querySelector('.close');
 
-
      enviar.addEventListener("click", detectRut);
 
 
      function detectRut(e) {
           e.preventDefault();
 
+          let valueMail = document.getElementById('mail').value;
           let rutFinal = campoRut.value;
           //console.log(rutFinal);
+
+          sessionStorage.setItem("mail", valueMail);
+          sessionStorage.setItem("rut", rutFinal)
 
           let url = 'clientes.json';
 
@@ -91,6 +94,8 @@ function app() {
                // const img =
                // const codigo =
                const resultado = document.getElementById(positionToUse).lastElementChild.innerHTML = productos;
+
+               
                //console.log(resultado);
 
                //TEMPLATES
@@ -103,12 +108,18 @@ function app() {
                     <h3>${valueToUse[0].porcentaje_descuento}</h3>
                     <h4>${valueToUse[0].productos}</h4>
                     <h5>${valueToUse[0].codigo_promocion}</h5>
+                    <button id="enviar-mail" href="#ok" type="submit" class="submit btn-enviar-formulario" name="enviar-mail">Enviar a mi correo</button>
                </div>
                `
                const oportunidades =`<div class="modal"><button class="close" type="button">X</button><h3 style="font-size: 2em;
                font-weight: 500;">Lo sentimos, se acabaron tus oportunidades</h3></div>`
 
-               
+               sessionStorage.setItem("descuento", valueToUse[0].porcentaje_descuento);
+               sessionStorage.setItem("productos", valueToUse[0].productos)
+               sessionStorage.setItem("codigo", valueToUse[0].codigo_promocion)
+               // CARGA DE DATOS EN CARTAS COMPLETA
+
+
                for (i = 0; i < carta.length; i++) {
                     carta[i].addEventListener("click", rotar);
                }
@@ -153,6 +164,8 @@ function app() {
                          console.log('ganaste');
                          setTimeout(function () {
                               container.innerHTML += modal;
+                              const enviarMail = document.querySelector('#enviar-mail');
+                              enviarMail.addEventListener("click", setLocalStorage);
                               const close = document.querySelector('.close');
                               close.addEventListener("click", resetApp);
                          }, 1000);
@@ -172,7 +185,32 @@ function app() {
           form.classList.remove("hide");
           campoRut.value ='';
           // form.value = '';
+          sessionStorage.clear();
      }
+     function setLocalStorage(e){
+          e.preventDefault();
+
+          fetch('enviar.php', {
+               method: 'POST',
+               body: datos
+             })
+             .then(ajaxPositive)
+             .catch(showError);
+         }
+
+     
+     const ajaxPositive = (response) => {
+          console.log('response.ok: ', response.ok);
+          if (response.ok) {
+            response.text().then(showResult);
+          } else {
+            showError('status code: ' + response.status);
+          }
+        }
+    
+        const showError = (err) => {
+          console.log('muestro error', err);
+        };
 }
 
 app();

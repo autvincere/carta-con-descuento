@@ -10,7 +10,9 @@
 }
 
 body {
-     background: linear-gradient(0deg, #11631F 0, #5FE36D 100%);
+     background: linear-gradient(0deg, #11631F 0%, #54bd5f 117%);
+     background-size: 100% 231%;
+     background-repeat: no-repeat;
 }
 
 h2 {
@@ -84,11 +86,15 @@ input::placeholder {
      text-transform: uppercase;
  }
 .campo{
-     height: 30px;
+     height: 36px;
      border-radius: 8px;
      border: 0px solid transparent;
-     width: 26%;
-     margin: 6px 0px 16px 0;
+     width: 78%;
+     display: block;
+     margin: 11px auto;
+     text-align: center;
+     font-size: 1em;
+     max-width: 420px;
 }
 
 .title-count {
@@ -209,7 +215,7 @@ form {
 .hide {
      transition: all 0.7s ease;
      opacity: 0;
-     /* display: none; */
+     display: none;
 }
 
 .absolute {
